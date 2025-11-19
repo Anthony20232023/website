@@ -1,0 +1,33 @@
+/* Minimal portfolio styles (moved from index.html) */
+#portfolio { padding: 3rem 1rem; max-width:1000px; margin:0 auto; }
+#portfolio h2 { text-align:center; margin-bottom:1rem; font-weight:600; }
+.portfolio-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1rem; }
+.card.portfolio { display:block; background:#fff; border-radius:8px; overflow:hidden; text-decoration:none; color:inherit; box-shadow:0 6px 18px rgba(0,0,0,.06); transition:transform .15s ease, box-shadow .15s ease; }
+.card.portfolio:hover { transform:translateY(-6px); box-shadow:0 12px 30px rgba(0,0,0,.10); }
+.card.portfolio img { width:100%; height:160px; object-fit:cover; display:block; }
+.card.portfolio .meta { padding:.8rem; }
+.card.portfolio h3 { margin:0 0 .25rem; font-size:1.05rem; }
+.card.portfolio p { margin:0; font-size:.9rem; color:#555; }
+
+/* Lightbox */
+#lightbox { position:fixed; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(0,0,0,.75); visibility:hidden; opacity:0; transition:opacity .2s ease; z-index:9999; }
+#lightbox.show { visibility:visible; opacity:1; }
+#lightbox .inner { max-width:92%; max-height:86%; text-align:center; }
+#lightbox img { max-width:100%; max-height:70vh; border-radius:6px; box-shadow:0 12px 40px rgba(0,0,0,.6); }
+#lightbox .caption { color:#fff; margin-top:.6rem; font-size:.95rem; }
+#lbClose { position:absolute; top:18px; right:20px; background:transparent; border:0; color:#fff; font-size:1.6rem; cursor:pointer; }
+@media (prefers-reduced-motion:reduce){ .card.portfolio, #lightbox { transition:none !important; } }
+
+/* Auth modal styles for protected links */
+.auth-modal { position:fixed; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(0,0,0,.6); visibility:hidden; opacity:0; transition:opacity .15s ease; z-index:10000; }
+.auth-modal.show { visibility:visible; opacity:1; }
+.auth-modal .panel { width:320px; max-width:92%; background:#fff; border-radius:8px; padding:1rem 1.1rem; box-shadow:0 10px 30px rgba(0,0,0,.3); }
+.auth-modal h4 { margin:0 0 .5rem; font-size:1.05rem; }
+.auth-modal label { display:block; font-size:.9rem; margin-top:.45rem; }
+.auth-modal input[type="text"], .auth-modal input[type="password"] { width:100%; padding:.5rem; margin-top:.25rem; border:1px solid #ddd; border-radius:4px; }
+.auth-modal .row { display:flex; justify-content:space-between; gap:.5rem; margin-top:.8rem; }
+.auth-modal .actions { display:flex; gap:.5rem; justify-content:flex-end; margin-top:.8rem; }
+.auth-modal button { padding:.45rem .7rem; border-radius:5px; border:0; cursor:pointer; }
+.auth-modal .btn-cancel { background:transparent; color:#333; border:1px solid #ddd; }
+.auth-modal .btn-submit { background:#0b78e3; color:#fff; }
+.auth-modal .msg { color:#c00; font-size:.9rem; margin-top:.5rem; min-height:1.2rem; }

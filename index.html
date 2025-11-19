@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Parallax Showcase</title>
+
+  <!-- Google font (change as you like) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">Parallax<span class="accent">.</span></div>
+      <nav class="nav">
+        <a href="#hero">Home</a>
+        <a href="#features">Features</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero (large parallax background) -->
+  <section id="hero" class="parallax" data-speed="0.35" aria-label="Hero">
+    <div class="container hero-content">
+      <h1>Elegant Parallax Design</h1>
+      <p class="lead">Stunning scrolling effects inspired by modern website showcases</p>
+      <a href="#gallery" class="btn">View Gallery</a>
+    </div>
+  </section>
+
+  <!-- Feature band (subtle parallax on images) -->
+  <section id="features" class="section">
+    <div class="container grid features-grid">
+      <article class="feature">
+        <div class="feature-media parallax" data-speed="0.12" style="background-image:url('https://via.placeholder.com/800x500?text=Food+Design')"></div>
+        <h3>Food Websites</h3>
+        <p>Clean, appetizing layouts for restaurants and recipes.</p>
+      </article>
+
+      <article class="feature">
+        <div class="feature-media parallax" data-speed="0.18" style="background-image:url('https://via.placeholder.com/800x500?text=Minimal+Design')"></div>
+        <h3>Minimal Portfolios</h3>
+        <p>Whitespace-first designs to highlight your work.</p>
+        <a class="feature-link protected" href="projects/minimal-portfolio.html" data-protected-username="admin" data-protected-password="secret">Read article</a>
+      </article>
+
+      <article class="feature">
+        <div class="feature-media parallax" data-speed="0.08" style="background-image:url('https://via.placeholder.com/800x500?text=Menu+UI')"></div>
+        <h3>Interactive Menus</h3>
+        <p>Menus and micro-interactions that delight users.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Masonry-like gallery -->
+  <section id="gallery" class="section gallery">
+    <div class="container">
+      <h2>Gallery</h2>
+      <div class="masonry">
+        <!-- use real images in your /images folder; these are placeholders -->
+        <div class="card"><img src="https://picsum.photos/seed/1/600/900" alt="Design shot 1"><p>Design shot</p></div>
+        <div class="card"><img src="https://picsum.photos/seed/2/600/800" alt="Design shot 2"><p>Design shot</p></div>
+        <div class="card"><img src="https://picsum.photos/seed/3/600/700" alt="Design shot 3"><p>Design shot</p></div>
+        <div class="card"><img src="https://picsum.photos/seed/4/600/1000" alt="Design shot 4"><p>Design shot</p></div>
+        <div class="card"><img src="https://picsum.photos/seed/5/600/750" alt="Design shot 5"><p>Design shot</p></div>
+        <div class="card"><img src="https://picsum.photos/seed/6/600/850" alt="Design shot 6"><p>Design shot</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Minimal Portfolio -->
+  <section id="portfolio" aria-labelledby="portfolio-heading">
+    <div class="container">
+      <h2 id="portfolio-heading">Portfolio</h2>
+
+      <div class="portfolio-grid">
+        <a class="card portfolio" href="projects/project1.html" data-img="images/project1.jpg">
+          <img src="images/project1-thumb.jpg" alt="Screenshot of Project 1">
+          <div class="meta">
+            <h3>Project 1</h3>
+            <p>Short blurb about the project. <small>Demo • Article</small></p>
+          </div>
+        </a>
+
+        <a class="card portfolio" href="projects/project2.html" data-img="images/project2.jpg">
+          <img src="images/project2-thumb.jpg" alt="Screenshot of Project 2">
+          <div class="meta">
+            <h3>Project 2</h3>
+            <p>Short blurb for project 2.</p>
+          </div>
+        </a>
+
+        <a class="card portfolio" href="projects/project3.html" data-img="images/project3.jpg">
+        <img src="images/project3-thumb.jpg" alt="Screenshot of Project 3">
+          <div class="meta">
+            <h3>Project 3</h3>
+            <p>Short blurb for project 3.</p>
+          </div>
+        </a>
+
+        <!-- Duplicate the .card.portfolio block for more items -->
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA strip (subtle parallax) -->
+  <section class="cta parallax" data-speed="0.22" aria-hidden="false">
+    <div class="container cta-inner">
+      <h3>Ready to build this effect?</h3>
+      <a class="btn btn-outline" href="#contact">Let's start</a>
+    </div>
+  </section>
+
+  <!-- Contact / Footer -->
+  <footer id="contact" class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <h4>Contact</h4>
+        <p>Email: hello@example.com</p>
+      </div>
+      <div class="legal">&copy; 2025 Parallax Design — Built with VS Code</div>
+    </div>
+  </footer>
+
+  <!-- Minimal lightbox overlay -->
+  <div id="lightbox" role="dialog" aria-hidden="true">
+    <button id="lbClose" aria-label="Close lightbox">✕</button>
+    <div class="inner">
+      <img src="" alt="">
+      <div class="caption"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="portfolio.js"></script>
+<img src="Grapher.jpg" alt="">
+
+</body>
+</html>
